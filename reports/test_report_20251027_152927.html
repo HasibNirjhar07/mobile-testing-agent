@@ -1,0 +1,761 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile App Test Report</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px;
+            color: #333;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+        
+        .header p {
+            font-size: 1.1em;
+            opacity: 0.9;
+        }
+        
+        .summary {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            padding: 40px;
+            background: #f8f9fa;
+        }
+        
+        .stat-card {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        
+        .stat-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .stat-number {
+            font-size: 3em;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+        
+        .stat-label {
+            color: #666;
+            font-size: 0.9em;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .passed { color: #28a745; }
+        .failed { color: #dc3545; }
+        .total { color: #007bff; }
+        .screens { color: #17a2b8; }
+        
+        .content {
+            padding: 40px;
+        }
+        
+        .section {
+            margin-bottom: 40px;
+        }
+        
+        .section h2 {
+            color: #667eea;
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #667eea;
+        }
+        
+        .app-info {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        
+        .app-info-item {
+            display: flex;
+            padding: 10px 0;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        
+        .app-info-item:last-child {
+            border-bottom: none;
+        }
+        
+        .app-info-label {
+            font-weight: bold;
+            width: 200px;
+            color: #555;
+        }
+        
+        .app-info-value {
+            flex: 1;
+            color: #333;
+        }
+        
+        .test-results {
+            display: grid;
+            gap: 20px;
+        }
+        
+        .test-item {
+            background: white;
+            border: 1px solid #e0e0e0;
+            border-radius: 10px;
+            padding: 20px;
+            transition: all 0.3s;
+        }
+        
+        .test-item:hover {
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .test-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        
+        .test-name {
+            font-size: 1.2em;
+            font-weight: 600;
+            color: #333;
+        }
+        
+        .test-status {
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 0.9em;
+        }
+        
+        .status-pass {
+            background: #d4edda;
+            color: #155724;
+        }
+        
+        .status-fail {
+            background: #f8d7da;
+            color: #721c24;
+        }
+        
+        .test-details {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 10px;
+            font-size: 0.9em;
+        }
+        
+        .screenshot {
+            margin-top: 15px;
+        }
+        
+        .screenshot img {
+            max-width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+        
+        .screenshot img:hover {
+            transform: scale(1.02);
+        }
+        
+        .progress-bar {
+            width: 100%;
+            height: 30px;
+            background: #e0e0e0;
+            border-radius: 15px;
+            overflow: hidden;
+            margin: 20px 0;
+        }
+        
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #28a745, #20c997);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            transition: width 1s;
+        }
+        
+        .footer {
+            background: #f8f9fa;
+            padding: 20px;
+            text-align: center;
+            color: #666;
+        }
+        
+        @media (max-width: 768px) {
+            .summary {
+                grid-template-columns: 1fr;
+            }
+            
+            .header h1 {
+                font-size: 1.8em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📱 Mobile App Test Report</h1>
+            <p>Automated Testing Results - October 27, 2025 at 03:29 PM</p>
+        </div>
+        
+        <div class="summary">
+            <div class="stat-card">
+                <div class="stat-label">Total Tests</div>
+                <div class="stat-number total">24</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-label">Passed</div>
+                <div class="stat-number passed">24</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-label">Failed</div>
+                <div class="stat-number failed">0</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-label">Screens Explored</div>
+                <div class="stat-number screens">10</div>
+            </div>
+        </div>
+        
+        <div class="content">
+            <div class="section">
+                <h2>📊 Test Summary</h2>
+                <div class="progress-bar">
+                    <div class="progress-fill" style="width: 100.0%">
+                        100.0% Pass Rate
+                    </div>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2>📦 Application Information</h2>
+                <div class="app-info">
+                    <div class="app-info-item">
+                        <div class="app-info-label">Package Name:</div>
+                        <div class="app-info-value">None</div>
+                    </div>
+                    <div class="app-info-item">
+                        <div class="app-info-label">Main Activity:</div>
+                        <div class="app-info-value">None</div>
+                    </div>
+                    <div class="app-info-item">
+                        <div class="app-info-label">Total Screens:</div>
+                        <div class="app-info-value">10</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2>🧪 Test Results</h2>
+                <div class="test-results">
+
+                    <div class="test-item">
+                        <div class="test-header">
+                            <div class="test-name">Launch App</div>
+                            <div class="test-status status-pass">PASS</div>
+                        </div>
+                        
+                        
+                <div class="screenshot">
+                    <img src="../screenshots\initial_screen_1761556988.png" alt="Screenshot" loading="lazy">
+                </div>
+
+                    </div>
+
+                    <div class="test-item">
+                        <div class="test-header">
+                            <div class="test-name">Click Voice search</div>
+                            <div class="test-status status-pass">PASS</div>
+                        </div>
+                        
+                <div class="test-details">
+                    <strong>Element Type:</strong> ImageView<br>
+                    <strong>Text:</strong> <br>
+                    <strong>Resource ID:</strong> com.google.android.apps.nexuslauncher:id/mic_icon<br>
+                    <strong>Content Description:</strong> Voice search
+                </div>
+
+                        
+                <div class="screenshot">
+                    <img src="../screenshots\after_Voice search_1761557001.png" alt="Screenshot" loading="lazy">
+                </div>
+
+                    </div>
+
+                    <div class="test-item">
+                        <div class="test-header">
+                            <div class="test-name">Click View</div>
+                            <div class="test-status status-pass">PASS</div>
+                        </div>
+                        
+                <div class="test-details">
+                    <strong>Element Type:</strong> View<br>
+                    <strong>Text:</strong> <br>
+                    <strong>Resource ID:</strong> com.google.android.googlequicksearchbox:id/googleapp_logo_view<br>
+                    <strong>Content Description:</strong> 
+                </div>
+
+                        
+                <div class="screenshot">
+                    <img src="../screenshots\after_View_1761557029.png" alt="Screenshot" loading="lazy">
+                </div>
+
+                    </div>
+
+                    <div class="test-item">
+                        <div class="test-header">
+                            <div class="test-name">Click Search a song</div>
+                            <div class="test-status status-pass">PASS</div>
+                        </div>
+                        
+                <div class="test-details">
+                    <strong>Element Type:</strong> Button<br>
+                    <strong>Text:</strong> Search a song<br>
+                    <strong>Resource ID:</strong> com.google.android.googlequicksearchbox:id/googleapp_search_a_song<br>
+                    <strong>Content Description:</strong> 
+                </div>
+
+                        
+                <div class="screenshot">
+                    <img src="../screenshots\after_Search a song_1761557054.png" alt="Screenshot" loading="lazy">
+                </div>
+
+                    </div>
+
+                    <div class="test-item">
+                        <div class="test-header">
+                            <div class="test-name">Click Close</div>
+                            <div class="test-status status-pass">PASS</div>
+                        </div>
+                        
+                <div class="test-details">
+                    <strong>Element Type:</strong> ImageView<br>
+                    <strong>Text:</strong> <br>
+                    <strong>Resource ID:</strong> com.google.android.googlequicksearchbox:id/soundsearch_close_button<br>
+                    <strong>Content Description:</strong> Close
+                </div>
+
+                        
+                <div class="screenshot">
+                    <img src="../screenshots\after_Close_1761557075.png" alt="Screenshot" loading="lazy">
+                </div>
+
+                    </div>
+
+                    <div class="test-item">
+                        <div class="test-header">
+                            <div class="test-name">Click ViewGroup</div>
+                            <div class="test-status status-pass">PASS</div>
+                        </div>
+                        
+                <div class="test-details">
+                    <strong>Element Type:</strong> ViewGroup<br>
+                    <strong>Text:</strong> <br>
+                    <strong>Resource ID:</strong> com.google.android.googlequicksearchbox:id/googleapp_voice_search_plate<br>
+                    <strong>Content Description:</strong> 
+                </div>
+
+                        
+                <div class="screenshot">
+                    <img src="../screenshots\after_ViewGroup_1761557087.png" alt="Screenshot" loading="lazy">
+                </div>
+
+                    </div>
+
+                    <div class="test-item">
+                        <div class="test-header">
+                            <div class="test-name">Click ScrollView</div>
+                            <div class="test-status status-pass">PASS</div>
+                        </div>
+                        
+                <div class="test-details">
+                    <strong>Element Type:</strong> ScrollView<br>
+                    <strong>Text:</strong> <br>
+                    <strong>Resource ID:</strong> com.google.android.apps.nexuslauncher:id/workspace<br>
+                    <strong>Content Description:</strong> 
+                </div>
+
+                        
+                <div class="screenshot">
+                    <img src="../screenshots\after_ScrollView_1761557114.png" alt="Screenshot" loading="lazy">
+                </div>
+
+                    </div>
+
+                    <div class="test-item">
+                        <div class="test-header">
+                            <div class="test-name">Click Photos</div>
+                            <div class="test-status status-pass">PASS</div>
+                        </div>
+                        
+                <div class="test-details">
+                    <strong>Element Type:</strong> TextView<br>
+                    <strong>Text:</strong> Photos<br>
+                    <strong>Resource ID:</strong> <br>
+                    <strong>Content Description:</strong> Photos
+                </div>
+
+                        
+                <div class="screenshot">
+                    <img src="../screenshots\after_Photos_1761557126.png" alt="Screenshot" loading="lazy">
+                </div>
+
+                    </div>
+
+                    <div class="test-item">
+                        <div class="test-header">
+                            <div class="test-name">Click Sign in to back up</div>
+                            <div class="test-status status-pass">PASS</div>
+                        </div>
+                        
+                <div class="test-details">
+                    <strong>Element Type:</strong> Button<br>
+                    <strong>Text:</strong> Sign in to back up<br>
+                    <strong>Resource ID:</strong> com.google.android.apps.photos:id/onboarding_action_button<br>
+                    <strong>Content Description:</strong> 
+                </div>
+
+                        
+                <div class="screenshot">
+                    <img src="../screenshots\after_Sign in to back up_1761557145.png" alt="Screenshot" loading="lazy">
+                </div>
+
+                    </div>
+
+                    <div class="test-item">
+                        <div class="test-header">
+                            <div class="test-name">Click WebView</div>
+                            <div class="test-status status-pass">PASS</div>
+                        </div>
+                        
+                <div class="test-details">
+                    <strong>Element Type:</strong> WebView<br>
+                    <strong>Text:</strong> <br>
+                    <strong>Resource ID:</strong> <br>
+                    <strong>Content Description:</strong> 
+                </div>
+
+                        
+                <div class="screenshot">
+                    <img src="../screenshots\after_WebView_1761557163.png" alt="Screenshot" loading="lazy">
+                </div>
+
+                    </div>
+
+                    <div class="test-item">
+                        <div class="test-header">
+                            <div class="test-name">Click Next</div>
+                            <div class="test-status status-pass">PASS</div>
+                        </div>
+                        
+                <div class="test-details">
+                    <strong>Element Type:</strong> Button<br>
+                    <strong>Text:</strong> Next<br>
+                    <strong>Resource ID:</strong> <br>
+                    <strong>Content Description:</strong> 
+                </div>
+
+                        
+                <div class="screenshot">
+                    <img src="../screenshots\after_Next_1761557173.png" alt="Screenshot" loading="lazy">
+                </div>
+
+                    </div>
+
+                    <div class="test-item">
+                        <div class="test-header">
+                            <div class="test-name">Click Next</div>
+                            <div class="test-status status-pass">PASS</div>
+                        </div>
+                        
+                <div class="test-details">
+                    <strong>Element Type:</strong> Button<br>
+                    <strong>Text:</strong> Next<br>
+                    <strong>Resource ID:</strong> <br>
+                    <strong>Content Description:</strong> 
+                </div>
+
+                        
+                <div class="screenshot">
+                    <img src="../screenshots\after_Next_1761557187.png" alt="Screenshot" loading="lazy">
+                </div>
+
+                    </div>
+
+                    <div class="test-item">
+                        <div class="test-header">
+                            <div class="test-name">Click Create account</div>
+                            <div class="test-status status-pass">PASS</div>
+                        </div>
+                        
+                <div class="test-details">
+                    <strong>Element Type:</strong> Button<br>
+                    <strong>Text:</strong> Create account<br>
+                    <strong>Resource ID:</strong> <br>
+                    <strong>Content Description:</strong> 
+                </div>
+
+                        
+                <div class="screenshot">
+                    <img src="../screenshots\after_Create account_1761557197.png" alt="Screenshot" loading="lazy">
+                </div>
+
+                    </div>
+
+                    <div class="test-item">
+                        <div class="test-header">
+                            <div class="test-name">Click For work or my business</div>
+                            <div class="test-status status-pass">PASS</div>
+                        </div>
+                        
+                <div class="test-details">
+                    <strong>Element Type:</strong> MenuItem<br>
+                    <strong>Text:</strong> For work or my business<br>
+                    <strong>Resource ID:</strong> <br>
+                    <strong>Content Description:</strong> 
+                </div>
+
+                        
+                <div class="screenshot">
+                    <img src="../screenshots\after_For work or my busin_1761557212.png" alt="Screenshot" loading="lazy">
+                </div>
+
+                    </div>
+
+                    <div class="test-item">
+                        <div class="test-header">
+                            <div class="test-name">Click EditText</div>
+                            <div class="test-status status-pass">PASS</div>
+                        </div>
+                        
+                <div class="test-details">
+                    <strong>Element Type:</strong> EditText<br>
+                    <strong>Text:</strong> <br>
+                    <strong>Resource ID:</strong> firstName<br>
+                    <strong>Content Description:</strong> 
+                </div>
+
+                        
+                <div class="screenshot">
+                    <img src="../screenshots\after_EditText_1761557228.png" alt="Screenshot" loading="lazy">
+                </div>
+
+                    </div>
+
+                    <div class="test-item">
+                        <div class="test-header">
+                            <div class="test-name">Click EditText</div>
+                            <div class="test-status status-pass">PASS</div>
+                        </div>
+                        
+                <div class="test-details">
+                    <strong>Element Type:</strong> EditText<br>
+                    <strong>Text:</strong> <br>
+                    <strong>Resource ID:</strong> lastName<br>
+                    <strong>Content Description:</strong> 
+                </div>
+
+                        
+                <div class="screenshot">
+                    <img src="../screenshots\after_EditText_1761557238.png" alt="Screenshot" loading="lazy">
+                </div>
+
+                    </div>
+
+                    <div class="test-item">
+                        <div class="test-header">
+                            <div class="test-name">Click Create account</div>
+                            <div class="test-status status-pass">PASS</div>
+                        </div>
+                        
+                <div class="test-details">
+                    <strong>Element Type:</strong> Button<br>
+                    <strong>Text:</strong> Create account<br>
+                    <strong>Resource ID:</strong> <br>
+                    <strong>Content Description:</strong> 
+                </div>
+
+                        
+                <div class="screenshot">
+                    <img src="../screenshots\after_Create account_1761557267.png" alt="Screenshot" loading="lazy">
+                </div>
+
+                    </div>
+
+                    <div class="test-item">
+                        <div class="test-header">
+                            <div class="test-name">Click For my child</div>
+                            <div class="test-status status-pass">PASS</div>
+                        </div>
+                        
+                <div class="test-details">
+                    <strong>Element Type:</strong> MenuItem<br>
+                    <strong>Text:</strong> For my child<br>
+                    <strong>Resource ID:</strong> <br>
+                    <strong>Content Description:</strong> 
+                </div>
+
+                        
+                <div class="screenshot">
+                    <img src="../screenshots\after_For my child_1761557276.png" alt="Screenshot" loading="lazy">
+                </div>
+
+                    </div>
+
+                    <div class="test-item">
+                        <div class="test-header">
+                            <div class="test-name">Click Let’s go!</div>
+                            <div class="test-status status-pass">PASS</div>
+                        </div>
+                        
+                <div class="test-details">
+                    <strong>Element Type:</strong> Button<br>
+                    <strong>Text:</strong> Let’s go!<br>
+                    <strong>Resource ID:</strong> <br>
+                    <strong>Content Description:</strong> 
+                </div>
+
+                        
+                <div class="screenshot">
+                    <img src="../screenshots\after_Let’s go!_1761557286.png" alt="Screenshot" loading="lazy">
+                </div>
+
+                    </div>
+
+                    <div class="test-item">
+                        <div class="test-header">
+                            <div class="test-name">Click EditText</div>
+                            <div class="test-status status-pass">PASS</div>
+                        </div>
+                        
+                <div class="test-details">
+                    <strong>Element Type:</strong> EditText<br>
+                    <strong>Text:</strong> <br>
+                    <strong>Resource ID:</strong> identifierId<br>
+                    <strong>Content Description:</strong> 
+                </div>
+
+                        
+                <div class="screenshot">
+                    <img src="../screenshots\after_EditText_1761557315.png" alt="Screenshot" loading="lazy">
+                </div>
+
+                    </div>
+
+                    <div class="test-item">
+                        <div class="test-header">
+                            <div class="test-name">Click Forgot email?</div>
+                            <div class="test-status status-pass">PASS</div>
+                        </div>
+                        
+                <div class="test-details">
+                    <strong>Element Type:</strong> Button<br>
+                    <strong>Text:</strong> Forgot email?<br>
+                    <strong>Resource ID:</strong> <br>
+                    <strong>Content Description:</strong> 
+                </div>
+
+                        
+                <div class="screenshot">
+                    <img src="../screenshots\after_Forgot email?_1761557324.png" alt="Screenshot" loading="lazy">
+                </div>
+
+                    </div>
+
+                    <div class="test-item">
+                        <div class="test-header">
+                            <div class="test-name">Back Button Test 1</div>
+                            <div class="test-status status-pass">PASS</div>
+                        </div>
+                        
+                        
+                <div class="screenshot">
+                    <img src="../screenshots\back_test_0_1761557354.png" alt="Screenshot" loading="lazy">
+                </div>
+
+                    </div>
+
+                    <div class="test-item">
+                        <div class="test-header">
+                            <div class="test-name">Back Button Test 2</div>
+                            <div class="test-status status-pass">PASS</div>
+                        </div>
+                        
+                        
+                <div class="screenshot">
+                    <img src="../screenshots\back_test_1_1761557357.png" alt="Screenshot" loading="lazy">
+                </div>
+
+                    </div>
+
+                    <div class="test-item">
+                        <div class="test-header">
+                            <div class="test-name">Back Button Test 3</div>
+                            <div class="test-status status-pass">PASS</div>
+                        </div>
+                        
+                        
+                <div class="screenshot">
+                    <img src="../screenshots\back_test_2_1761557359.png" alt="Screenshot" loading="lazy">
+                </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>Generated by Automated Mobile App Testing Agent</p>
+            <p>Powered by Python + Appium + AI</p>
+        </div>
+    </div>
+</body>
+</html>

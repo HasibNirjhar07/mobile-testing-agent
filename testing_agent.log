@@ -1,0 +1,663 @@
+2025-10-27 12:46:47 | INFO     | __main__:main - ============================================================
+2025-10-27 12:46:47 | INFO     | __main__:main - 🤖 Automated Mobile App Testing Agent
+2025-10-27 12:46:47 | INFO     | __main__:main - ============================================================
+2025-10-27 12:46:47 | INFO     | __main__:main - 
+📱 Step 1: Starting Android Emulator...
+2025-10-27 12:46:47 | INFO     | app.emulator_manager:start - Starting emulator: test_device
+2025-10-27 12:46:47 | ERROR    | app.emulator_manager:is_running - Failed to check emulator status: [WinError 2] The system cannot find the file specified
+2025-10-27 12:46:47 | ERROR    | app.emulator_manager:start - Failed to start emulator: ANDROID_HOME environment variable not set
+2025-10-27 12:46:47 | ERROR    | __main__:main - Failed to start emulator. Exiting.
+2025-10-27 12:54:18 | INFO     | __main__:main - ============================================================
+2025-10-27 12:54:18 | INFO     | __main__:main - 🤖 Automated Mobile App Testing Agent
+2025-10-27 12:54:18 | INFO     | __main__:main - ============================================================
+2025-10-27 12:54:18 | INFO     | __main__:main - 
+📱 Step 1: Starting Android Emulator...
+2025-10-27 12:54:18 | INFO     | app.emulator_manager:start - Starting emulator: test_device
+2025-10-27 12:54:19 | DEBUG    | app.emulator_manager:start - Command: C:\Users\hasib\AppData\Local\Android\Sdk\emulator\emulator.exe -avd test_device -port 5554 -no-snapshot-load -no-audio -gpu swiftshader_indirect
+2025-10-27 12:54:19 | INFO     | app.emulator_manager:start - Waiting for emulator to boot...
+2025-10-27 12:56:21 | ERROR    | app.emulator_manager:start - Emulator failed to boot within timeout
+2025-10-27 12:56:21 | ERROR    | __main__:main - Failed to start emulator. Exiting.
+2025-10-27 12:58:16 | INFO     | __main__:main - ============================================================
+2025-10-27 12:58:16 | INFO     | __main__:main - 🤖 Automated Mobile App Testing Agent
+2025-10-27 12:58:16 | INFO     | __main__:main - ============================================================
+2025-10-27 12:58:16 | INFO     | __main__:main - 
+📱 Step 1: Starting Android Emulator...
+2025-10-27 12:58:16 | INFO     | app.emulator_manager:start - Starting emulator: test_device
+2025-10-27 12:58:16 | INFO     | app.emulator_manager:start - Emulator already running
+2025-10-27 12:58:16 | INFO     | __main__:main - 
+📦 Step 2: Installing APK...
+2025-10-27 12:58:16 | INFO     | app.apk_installer:install - Installing APK: tests\sample_apks\myapp.apk
+2025-10-27 12:58:16 | ERROR    | app.apk_installer:_get_package_name - aapt not found. Make sure Android SDK build-tools is in PATH
+2025-10-27 12:58:16 | ERROR    | app.apk_installer:_get_main_activity - Failed to get main activity: [WinError 2] The system cannot find the file specified
+2025-10-27 12:58:16 | INFO     | app.apk_installer:install - Package: None
+2025-10-27 12:58:16 | INFO     | app.apk_installer:install - Main Activity: None
+2025-10-27 12:58:24 | INFO     | app.apk_installer:install - APK installed successfully
+2025-10-27 12:58:26 | INFO     | __main__:main - 
+🧪 Step 3: Running Automated Tests...
+2025-10-27 12:58:26 | INFO     | app.test_executor:run_tests - Starting automated testing...
+2025-10-27 12:58:26 | INFO     | app.test_executor:run_tests - Phase 1: Exploring app structure...
+2025-10-27 12:58:26 | ERROR    | app.apk_installer:launch - Package name or main activity not set
+2025-10-27 12:58:36 | INFO     | app.ui_explorer:take_screenshot - Screenshot saved: initial_screen_1761548309.png
+2025-10-27 12:58:46 | ERROR    | app.ui_explorer:get_ui_hierarchy - Failed to get UI hierarchy: Command '['adb', '-s', 'emulator-5554', 'shell', 'uiautomator', 'dump', '/sdcard/window_dump.xml']' timed out after 10 seconds
+2025-10-27 12:58:46 | WARNING  | app.test_executor:_explore_app - No interactive elements found
+2025-10-27 12:58:46 | INFO     | app.test_executor:run_tests - Phase 2: Testing common flows...
+2025-10-27 12:58:46 | ERROR    | app.apk_installer:launch - Package name or main activity not set
+2025-10-27 12:58:49 | INFO     | app.test_executor:_test_navigation - Testing navigation...
+2025-10-27 12:59:07 | INFO     | app.test_executor:_test_back_button - Testing back button...
+2025-10-27 12:59:10 | DEBUG    | app.ui_explorer:tap_element - Tapping at (416, 1970): Messages
+2025-10-27 12:59:17 | DEBUG    | app.ui_explorer:tap_element - Tapping at (169, 1627): Play Store
+2025-10-27 12:59:24 | DEBUG    | app.ui_explorer:tap_element - Tapping at (540, 2274): Use Messages without an account
+2025-10-27 12:59:28 | INFO     | app.ui_explorer:take_screenshot - Screenshot saved: back_test_0_1761548366.png
+2025-10-27 12:59:33 | INFO     | app.ui_explorer:take_screenshot - Screenshot saved: back_test_1_1761548371.png
+2025-10-27 12:59:37 | INFO     | app.ui_explorer:take_screenshot - Screenshot saved: back_test_2_1761548375.png
+2025-10-27 12:59:39 | INFO     | app.test_executor:run_tests - Phase 3: Testing form inputs...
+2025-10-27 12:59:39 | INFO     | app.test_executor:_test_forms - Testing forms...
+2025-10-27 12:59:39 | ERROR    | app.apk_installer:launch - Package name or main activity not set
+2025-10-27 12:59:46 | INFO     | app.test_executor:run_tests - Testing completed in 79.34 seconds
+2025-10-27 12:59:46 | INFO     | app.test_executor:run_tests - Total screens explored: 0
+2025-10-27 12:59:46 | INFO     | app.test_executor:run_tests - Total actions performed: 4
+2025-10-27 12:59:46 | INFO     | __main__:main - 
+📊 Step 4: Generating Test Report...
+2025-10-27 12:59:46 | INFO     | app.report_generator:generate - Generating test report...
+2025-10-27 12:59:46 | INFO     | app.report_generator:_generate_html - HTML report generated: reports\test_report_20251027_125946.html
+2025-10-27 12:59:46 | INFO     | __main__:main - 
+============================================================
+2025-10-27 12:59:46 | INFO     | __main__:main - ✅ Testing Complete!
+2025-10-27 12:59:46 | INFO     | __main__:main - ============================================================
+2025-10-27 12:59:46 | INFO     | __main__:main - 📊 Total Tests: 4
+2025-10-27 12:59:46 | INFO     | __main__:main - ✅ Passed: 4
+2025-10-27 12:59:46 | INFO     | __main__:main - ❌ Failed: 0
+2025-10-27 12:59:46 | INFO     | __main__:main - 🖼️  Screens Explored: 0
+2025-10-27 12:59:46 | INFO     | __main__:main - 📄 Report: reports\test_report_20251027_125946.html
+2025-10-27 12:59:46 | INFO     | __main__:main - ============================================================
+2025-10-27 12:59:46 | INFO     | __main__:main - 
+🧹 Cleaning up...
+2025-10-27 12:59:46 | INFO     | app.emulator_manager:stop - Stopping emulator...
+2025-10-27 12:59:46 | INFO     | app.emulator_manager:stop - Emulator stopped
+2025-10-27 12:59:46 | INFO     | __main__:main - 
+✨ All done! Check the report for detailed results.
+2025-10-27 15:04:13 | INFO     | __main__:main - ============================================================
+2025-10-27 15:04:13 | INFO     | __main__:main - 🤖 Automated Mobile App Testing Agent
+2025-10-27 15:04:13 | INFO     | __main__:main - ============================================================
+2025-10-27 15:04:13 | INFO     | __main__:main - 
+📱 Step 1: Starting Android Emulator...
+2025-10-27 15:04:13 | INFO     | app.emulator_manager:start - Starting emulator: test_device
+2025-10-27 15:04:13 | DEBUG    | app.emulator_manager:start - Command: C:\Users\hasib\AppData\Local\Android\Sdk\emulator\emulator.exe -avd test_device -port 5554 -no-snapshot-load -no-audio -gpu swiftshader_indirect
+2025-10-27 15:04:13 | INFO     | app.emulator_manager:start - Waiting for emulator to boot...
+2025-10-27 15:06:13 | ERROR    | app.emulator_manager:start - Emulator failed to boot within timeout
+2025-10-27 15:06:13 | ERROR    | __main__:main - Failed to start emulator. Exiting.
+2025-10-27 15:06:31 | INFO     | __main__:main - ============================================================
+2025-10-27 15:06:31 | INFO     | __main__:main - 🤖 Automated Mobile App Testing Agent
+2025-10-27 15:06:31 | INFO     | __main__:main - ============================================================
+2025-10-27 15:06:31 | INFO     | __main__:main - 
+📱 Step 1: Starting Android Emulator...
+2025-10-27 15:06:31 | INFO     | app.emulator_manager:start - Starting emulator: test_device
+2025-10-27 15:06:31 | INFO     | app.emulator_manager:start - Emulator already running
+2025-10-27 15:06:31 | INFO     | __main__:main - 
+📦 Step 2: Installing APK...
+2025-10-27 15:06:31 | INFO     | app.apk_installer:install - Installing APK: tests\sample_apks\myapp.apk
+2025-10-27 15:06:31 | ERROR    | app.apk_installer:_get_package_name - aapt not found. Make sure Android SDK build-tools is in PATH
+2025-10-27 15:06:31 | ERROR    | app.apk_installer:_get_main_activity - Failed to get main activity: [WinError 2] The system cannot find the file specified
+2025-10-27 15:06:31 | INFO     | app.apk_installer:install - Package: None
+2025-10-27 15:06:31 | INFO     | app.apk_installer:install - Main Activity: None
+2025-10-27 15:06:32 | ERROR    | app.apk_installer:install - Installation failed: Performing Streamed Install
+
+2025-10-27 15:06:32 | ERROR    | __main__:main - Failed to install APK. Exiting.
+2025-10-27 15:06:32 | INFO     | app.emulator_manager:stop - Stopping emulator...
+2025-10-27 15:06:32 | INFO     | app.emulator_manager:stop - Emulator stopped
+2025-10-27 15:10:55 | INFO     | __main__:main - ============================================================
+2025-10-27 15:10:55 | INFO     | __main__:main - 🤖 Automated Mobile App Testing Agent
+2025-10-27 15:10:55 | INFO     | __main__:main - ============================================================
+2025-10-27 15:10:55 | INFO     | __main__:main - 
+📱 Step 1: Starting Android Emulator...
+2025-10-27 15:10:55 | INFO     | app.emulator_manager:start - Starting emulator: test_device
+2025-10-27 15:10:55 | DEBUG    | app.emulator_manager:start - Command: C:\Users\hasib\AppData\Local\Android\Sdk\emulator\emulator.exe -avd test_device -port 5554 -no-snapshot-load -no-audio -gpu swiftshader_indirect
+2025-10-27 15:10:55 | INFO     | app.emulator_manager:start - Waiting for emulator to boot...
+2025-10-27 15:12:57 | ERROR    | app.emulator_manager:start - Emulator failed to boot within timeout
+2025-10-27 15:12:57 | ERROR    | __main__:main - Failed to start emulator. Exiting.
+2025-10-27 15:13:20 | INFO     | __main__:main - ============================================================
+2025-10-27 15:13:20 | INFO     | __main__:main - 🤖 Automated Mobile App Testing Agent
+2025-10-27 15:13:20 | INFO     | __main__:main - ============================================================
+2025-10-27 15:13:20 | INFO     | __main__:main - 
+📱 Step 1: Starting Android Emulator...
+2025-10-27 15:13:20 | INFO     | app.emulator_manager:start - Starting emulator: test_device
+2025-10-27 15:13:20 | INFO     | app.emulator_manager:start - Emulator already running
+2025-10-27 15:13:20 | INFO     | __main__:main - 
+📦 Step 2: Installing APK...
+2025-10-27 15:13:20 | INFO     | app.apk_installer:install - Installing APK: tests\sample_apks\myapp.apk
+2025-10-27 15:13:20 | ERROR    | app.apk_installer:_get_package_name - Failed to get package name: expected string or bytes-like object
+2025-10-27 15:13:20 | ERROR    | app.apk_installer:_get_main_activity - Failed to get main activity: expected string or bytes-like object
+2025-10-27 15:13:20 | INFO     | app.apk_installer:install - Package: None
+2025-10-27 15:13:20 | INFO     | app.apk_installer:install - Main Activity: None
+2025-10-27 15:13:21 | ERROR    | app.apk_installer:install - Installation failed: Performing Streamed Install
+
+2025-10-27 15:13:21 | ERROR    | __main__:main - Failed to install APK. Exiting.
+2025-10-27 15:13:21 | INFO     | app.emulator_manager:stop - Stopping emulator...
+2025-10-27 15:13:21 | INFO     | app.emulator_manager:stop - Emulator stopped
+2025-10-27 15:16:49 | INFO     | __main__:main - ============================================================
+2025-10-27 15:16:49 | INFO     | __main__:main - 🤖 Automated Mobile App Testing Agent
+2025-10-27 15:16:49 | INFO     | __main__:main - ============================================================
+2025-10-27 15:16:49 | INFO     | __main__:main - 
+📱 Step 1: Starting Android Emulator...
+2025-10-27 15:16:49 | INFO     | app.emulator_manager:start - Starting emulator: test_device
+2025-10-27 15:16:49 | DEBUG    | app.emulator_manager:start - Command: C:\Users\hasib\AppData\Local\Android\Sdk\emulator\emulator.exe -avd test_device -port 5554 -no-snapshot-load -no-audio -gpu swiftshader_indirect
+2025-10-27 15:16:49 | INFO     | app.emulator_manager:start - Waiting for emulator to boot...
+2025-10-27 15:18:51 | ERROR    | app.emulator_manager:start - Emulator failed to boot within timeout
+2025-10-27 15:18:51 | ERROR    | __main__:main - Failed to start emulator. Exiting.
+2025-10-27 15:18:57 | INFO     | __main__:main - ============================================================
+2025-10-27 15:18:57 | INFO     | __main__:main - 🤖 Automated Mobile App Testing Agent
+2025-10-27 15:18:57 | INFO     | __main__:main - ============================================================
+2025-10-27 15:18:57 | INFO     | __main__:main - 
+📱 Step 1: Starting Android Emulator...
+2025-10-27 15:18:57 | INFO     | app.emulator_manager:start - Starting emulator: test_device
+2025-10-27 15:18:57 | INFO     | app.emulator_manager:start - Emulator already running
+2025-10-27 15:18:57 | INFO     | __main__:main - 
+📦 Step 2: Installing APK...
+2025-10-27 15:18:57 | INFO     | app.apk_installer:install - Installing APK: tests\sample_apks\myapp.apk
+2025-10-27 15:18:57 | ERROR    | app.apk_installer:_get_package_name - Failed to get package name: expected string or bytes-like object
+2025-10-27 15:18:57 | ERROR    | app.apk_installer:_get_main_activity - Failed to get main activity: expected string or bytes-like object
+2025-10-27 15:18:57 | INFO     | app.apk_installer:install - Package: None
+2025-10-27 15:18:57 | INFO     | app.apk_installer:install - Main Activity: None
+2025-10-27 15:18:57 | ERROR    | app.apk_installer:install - Installation failed: 
+2025-10-27 15:18:57 | ERROR    | __main__:main - Failed to install APK. Exiting.
+2025-10-27 15:18:57 | INFO     | app.emulator_manager:stop - Stopping emulator...
+2025-10-27 15:18:57 | INFO     | app.emulator_manager:stop - Emulator stopped
+2025-10-27 15:19:23 | INFO     | __main__:main - ============================================================
+2025-10-27 15:19:23 | INFO     | __main__:main - 🤖 Automated Mobile App Testing Agent
+2025-10-27 15:19:23 | INFO     | __main__:main - ============================================================
+2025-10-27 15:19:23 | INFO     | __main__:main - 
+📱 Step 1: Starting Android Emulator...
+2025-10-27 15:19:23 | INFO     | app.emulator_manager:start - Starting emulator: test_device
+2025-10-27 15:19:23 | DEBUG    | app.emulator_manager:start - Command: C:\Users\hasib\AppData\Local\Android\Sdk\emulator\emulator.exe -avd test_device -port 5554 -no-snapshot-load -no-audio -gpu swiftshader_indirect
+2025-10-27 15:19:23 | INFO     | app.emulator_manager:start - Waiting for emulator to boot...
+2025-10-27 15:21:25 | ERROR    | app.emulator_manager:start - Emulator failed to boot within timeout
+2025-10-27 15:21:25 | ERROR    | __main__:main - Failed to start emulator. Exiting.
+2025-10-27 15:21:33 | INFO     | __main__:main - ============================================================
+2025-10-27 15:21:33 | INFO     | __main__:main - 🤖 Automated Mobile App Testing Agent
+2025-10-27 15:21:33 | INFO     | __main__:main - ============================================================
+2025-10-27 15:21:33 | INFO     | __main__:main - 
+📱 Step 1: Starting Android Emulator...
+2025-10-27 15:21:33 | INFO     | app.emulator_manager:start - Starting emulator: test_device
+2025-10-27 15:21:33 | DEBUG    | app.emulator_manager:start - Command: C:\Users\hasib\AppData\Local\Android\Sdk\emulator\emulator.exe -avd test_device -port 5554 -no-snapshot-load -no-audio -gpu swiftshader_indirect
+2025-10-27 15:21:33 | INFO     | app.emulator_manager:start - Waiting for emulator to boot...
+2025-10-27 15:22:52 | INFO     | app.emulator_manager:start - Emulator started successfully
+2025-10-27 15:22:52 | INFO     | __main__:main - 
+📦 Step 2: Installing APK...
+2025-10-27 15:22:52 | INFO     | app.apk_installer:install - Installing APK: tests\sample_apks\myapp.apk
+2025-10-27 15:22:52 | ERROR    | app.apk_installer:_get_package_name - Failed to get package name: expected string or bytes-like object
+2025-10-27 15:22:52 | ERROR    | app.apk_installer:_get_main_activity - Failed to get main activity: expected string or bytes-like object
+2025-10-27 15:22:52 | INFO     | app.apk_installer:install - Package: None
+2025-10-27 15:22:52 | INFO     | app.apk_installer:install - Main Activity: None
+2025-10-27 15:23:03 | INFO     | app.apk_installer:install - APK installed successfully
+2025-10-27 15:23:05 | INFO     | __main__:main - 
+🧪 Step 3: Running Automated Tests...
+2025-10-27 15:23:05 | INFO     | app.test_executor:run_tests - Starting automated testing...
+2025-10-27 15:23:05 | INFO     | app.test_executor:run_tests - Phase 1: Exploring app structure...
+2025-10-27 15:23:05 | ERROR    | app.apk_installer:launch - Package name or main activity not set
+2025-10-27 15:23:11 | INFO     | app.ui_explorer:take_screenshot - Screenshot saved: initial_screen_1761556988.png
+2025-10-27 15:23:15 | INFO     | app.test_executor:_explore_app - Clicking: Voice search
+2025-10-27 15:23:17 | INFO     | app.ui_explorer:take_screenshot - Screenshot saved: before_Voice search_1761556995.png
+2025-10-27 15:23:17 | DEBUG    | app.ui_explorer:tap_element - Tapping at (790, 2207): Voice search
+2025-10-27 15:23:28 | INFO     | app.ui_explorer:take_screenshot - Screenshot saved: after_Voice search_1761557001.png
+2025-10-27 15:23:33 | INFO     | app.test_executor:_explore_app - New screen discovered!
+2025-10-27 15:23:40 | INFO     | app.test_executor:_explore_app - Clicking: View
+2025-10-27 15:23:45 | INFO     | app.ui_explorer:take_screenshot - Screenshot saved: before_View_1761557020.png
+2025-10-27 15:23:45 | DEBUG    | app.ui_explorer:tap_element - Tapping at (540, 488): 
+2025-10-27 15:23:52 | INFO     | app.ui_explorer:take_screenshot - Screenshot saved: after_View_1761557029.png
+2025-10-27 15:24:00 | INFO     | app.test_executor:_explore_app - New screen discovered!
+2025-10-27 15:24:05 | INFO     | app.test_executor:_explore_app - Clicking: Search a song
+2025-10-27 15:24:10 | INFO     | app.ui_explorer:take_screenshot - Screenshot saved: before_Search a song_1761557045.png
+2025-10-27 15:24:10 | DEBUG    | app.ui_explorer:tap_element - Tapping at (540, 2248): Search a song
+2025-10-27 15:24:16 | INFO     | app.ui_explorer:take_screenshot - Screenshot saved: after_Search a song_1761557054.png
+2025-10-27 15:24:22 | INFO     | app.test_executor:_explore_app - New screen discovered!
+2025-10-27 15:24:28 | INFO     | app.test_executor:_explore_app - Clicking: Close
+2025-10-27 15:24:31 | INFO     | app.ui_explorer:take_screenshot - Screenshot saved: before_Close_1761557068.png
+2025-10-27 15:24:31 | DEBUG    | app.ui_explorer:tap_element - Tapping at (63, 241): Close
+2025-10-27 15:24:36 | INFO     | app.ui_explorer:take_screenshot - Screenshot saved: after_Close_1761557075.png
+2025-10-27 15:24:43 | INFO     | app.test_executor:_explore_app - Clicking: ViewGroup
+2025-10-27 15:24:44 | INFO     | app.ui_explorer:take_screenshot - Screenshot saved: before_ViewGroup_1761557083.png
+2025-10-27 15:24:44 | DEBUG    | app.ui_explorer:tap_element - Tapping at (540, 1200): 
+2025-10-27 15:24:47 | INFO     | app.ui_explorer:take_screenshot - Screenshot saved: after_ViewGroup_1761557087.png
+2025-10-27 15:24:58 | INFO     | app.test_executor:_explore_app - No more elements to explore, going back...
+2025-10-27 15:25:09 | INFO     | app.test_executor:_explore_app - Clicking: ScrollView
+2025-10-27 15:25:11 | INFO     | app.ui_explorer:take_screenshot - Screenshot saved: before_ScrollView_1761557109.png
+2025-10-27 15:25:11 | DEBUG    | app.ui_explorer:tap_element - Tapping at (540, 1200): 
+2025-10-27 15:25:15 | INFO     | app.ui_explorer:take_screenshot - Screenshot saved: after_ScrollView_1761557114.png
+2025-10-27 15:25:21 | INFO     | app.test_executor:_explore_app - Clicking: Photos
+2025-10-27 15:25:23 | INFO     | app.ui_explorer:take_screenshot - Screenshot saved: before_Photos_1761557121.png
+2025-10-27 15:25:23 | DEBUG    | app.ui_explorer:tap_element - Tapping at (663, 1627): Photos
+2025-10-27 15:25:27 | INFO     | app.ui_explorer:take_screenshot - Screenshot saved: after_Photos_1761557126.png
+2025-10-27 15:25:35 | INFO     | app.test_executor:_explore_app - New screen discovered!
+2025-10-27 15:25:42 | INFO     | app.test_executor:_explore_app - Clicking: Sign in to back up
+2025-10-27 15:25:42 | INFO     | app.ui_explorer:take_screenshot - Screenshot saved: before_Sign in to back up_1761557142.png
+2025-10-27 15:25:42 | DEBUG    | app.ui_explorer:tap_element - Tapping at (540, 2141): Sign in to back up
+2025-10-27 15:25:47 | INFO     | app.ui_explorer:take_screenshot - Screenshot saved: after_Sign in to back up_1761557145.png
+2025-10-27 15:25:54 | INFO     | app.test_executor:_explore_app - New screen discovered!
+2025-10-27 15:25:58 | INFO     | app.test_executor:_explore_app - Clicking: WebView
+2025-10-27 15:26:00 | INFO     | app.ui_explorer:take_screenshot - Screenshot saved: before_WebView_1761557158.png
+2025-10-27 15:26:00 | DEBUG    | app.ui_explorer:tap_element - Tapping at (540, 1236): 
+2025-10-27 15:26:04 | INFO     | app.ui_explorer:take_screenshot - Screenshot saved: after_WebView_1761557163.png
+2025-10-27 15:26:06 | INFO     | app.test_executor:_explore_app - New screen discovered!
+2025-10-27 15:26:09 | INFO     | app.test_executor:_explore_app - Clicking: Next
+2025-10-27 15:26:10 | INFO     | app.ui_explorer:take_screenshot - Screenshot saved: before_Next_1761557169.png
+2025-10-27 15:26:10 | DEBUG    | app.ui_explorer:tap_element - Tapping at (914, 2223): Next
+2025-10-27 15:26:16 | INFO     | app.ui_explorer:take_screenshot - Screenshot saved: after_Next_1761557173.png
+2025-10-27 15:26:23 | INFO     | app.test_executor:_explore_app - Clicking: Next
+2025-10-27 15:26:24 | INFO     | app.ui_explorer:take_screenshot - Screenshot saved: before_Next_1761557183.png
+2025-10-27 15:26:24 | DEBUG    | app.ui_explorer:tap_element - Tapping at (914, 1404): Next
+2025-10-27 15:26:27 | INFO     | app.ui_explorer:take_screenshot - Screenshot saved: after_Next_1761557187.png
+2025-10-27 15:26:33 | INFO     | app.test_executor:_explore_app - Clicking: Create account
+2025-10-27 15:26:34 | INFO     | app.ui_explorer:take_screenshot - Screenshot saved: before_Create account_1761557193.png
+2025-10-27 15:26:34 | DEBUG    | app.ui_explorer:tap_element - Tapping at (198, 1404): Create account
+2025-10-27 15:26:37 | INFO     | app.ui_explorer:take_screenshot - Screenshot saved: after_Create account_1761557197.png
+2025-10-27 15:26:40 | INFO     | app.test_executor:_explore_app - New screen discovered!
+2025-10-27 15:26:47 | INFO     | app.test_executor:_explore_app - Clicking: For work or my business
+2025-10-27 15:26:48 | INFO     | app.ui_explorer:take_screenshot - Screenshot saved: before_For work or my busin_1761557207.png
+2025-10-27 15:26:48 | DEBUG    | app.ui_explorer:tap_element - Tapping at (316, 2092): For work or my business
+2025-10-27 15:26:56 | INFO     | app.ui_explorer:take_screenshot - Screenshot saved: after_For work or my busin_1761557212.png
+2025-10-27 15:27:01 | INFO     | app.test_executor:_explore_app - New screen discovered!
+2025-10-27 15:27:04 | INFO     | app.test_executor:_explore_app - Clicking: EditText
+2025-10-27 15:27:05 | INFO     | app.ui_explorer:take_screenshot - Screenshot saved: before_EditText_1761557224.png
+2025-10-27 15:27:05 | DEBUG    | app.ui_explorer:tap_element - Tapping at (540, 713): 
+2025-10-27 15:27:08 | INFO     | app.ui_explorer:take_screenshot - Screenshot saved: after_EditText_1761557228.png
+2025-10-27 15:27:14 | INFO     | app.test_executor:_explore_app - Clicking: EditText
+2025-10-27 15:27:14 | INFO     | app.ui_explorer:take_screenshot - Screenshot saved: before_EditText_1761557234.png
+2025-10-27 15:27:14 | DEBUG    | app.ui_explorer:tap_element - Tapping at (540, 923): 
+2025-10-27 15:27:18 | INFO     | app.ui_explorer:take_screenshot - Screenshot saved: after_EditText_1761557238.png
+2025-10-27 15:27:27 | INFO     | app.test_executor:_explore_app - No more elements to explore, going back...
+2025-10-27 15:27:37 | INFO     | app.test_executor:_explore_app - No more elements to explore, going back...
+2025-10-27 15:27:44 | INFO     | app.test_executor:_explore_app - Clicking: Create account
+2025-10-27 15:27:44 | INFO     | app.ui_explorer:take_screenshot - Screenshot saved: before_Create account_1761557264.png
+2025-10-27 15:27:44 | DEBUG    | app.ui_explorer:tap_element - Tapping at (198, 2223): Create account
+2025-10-27 15:27:48 | INFO     | app.ui_explorer:take_screenshot - Screenshot saved: after_Create account_1761557267.png
+2025-10-27 15:27:53 | INFO     | app.test_executor:_explore_app - Clicking: For my child
+2025-10-27 15:27:53 | INFO     | app.ui_explorer:take_screenshot - Screenshot saved: before_For my child_1761557273.png
+2025-10-27 15:27:53 | DEBUG    | app.ui_explorer:tap_element - Tapping at (316, 1966): For my child
+2025-10-27 15:27:57 | INFO     | app.ui_explorer:take_screenshot - Screenshot saved: after_For my child_1761557276.png
+2025-10-27 15:27:59 | INFO     | app.test_executor:_explore_app - New screen discovered!
+2025-10-27 15:28:02 | INFO     | app.test_executor:_explore_app - Clicking: Let’s go!
+2025-10-27 15:28:03 | INFO     | app.ui_explorer:take_screenshot - Screenshot saved: before_Let’s go!_1761557282.png
+2025-10-27 15:28:03 | DEBUG    | app.ui_explorer:tap_element - Tapping at (883, 2223): Let’s go!
+2025-10-27 15:28:06 | INFO     | app.ui_explorer:take_screenshot - Screenshot saved: after_Let’s go!_1761557286.png
+2025-10-27 15:28:15 | INFO     | app.test_executor:_explore_app - No more elements to explore, going back...
+2025-10-27 15:28:25 | INFO     | app.test_executor:_explore_app - No more elements to explore, going back...
+2025-10-27 15:28:31 | INFO     | app.test_executor:_explore_app - Clicking: EditText
+2025-10-27 15:28:32 | INFO     | app.ui_explorer:take_screenshot - Screenshot saved: before_EditText_1761557311.png
+2025-10-27 15:28:32 | DEBUG    | app.ui_explorer:tap_element - Tapping at (540, 902): 
+2025-10-27 15:28:35 | INFO     | app.ui_explorer:take_screenshot - Screenshot saved: after_EditText_1761557315.png
+2025-10-27 15:28:41 | INFO     | app.test_executor:_explore_app - Clicking: Forgot email?
+2025-10-27 15:28:41 | INFO     | app.ui_explorer:take_screenshot - Screenshot saved: before_Forgot email?_1761557321.png
+2025-10-27 15:28:41 | DEBUG    | app.ui_explorer:tap_element - Tapping at (178, 1024): Forgot email?
+2025-10-27 15:28:45 | INFO     | app.ui_explorer:take_screenshot - Screenshot saved: after_Forgot email?_1761557324.png
+2025-10-27 15:28:47 | INFO     | app.test_executor:_explore_app - New screen discovered!
+2025-10-27 15:28:48 | INFO     | app.test_executor:run_tests - Phase 2: Testing common flows...
+2025-10-27 15:28:48 | ERROR    | app.apk_installer:launch - Package name or main activity not set
+2025-10-27 15:28:51 | INFO     | app.test_executor:_test_navigation - Testing navigation...
+2025-10-27 15:29:01 | INFO     | app.test_executor:_test_back_button - Testing back button...
+2025-10-27 15:29:03 | DEBUG    | app.ui_explorer:tap_element - Tapping at (914, 2223): Next
+2025-10-27 15:29:08 | DEBUG    | app.ui_explorer:tap_element - Tapping at (914, 1404): Next
+2025-10-27 15:29:12 | DEBUG    | app.ui_explorer:tap_element - Tapping at (914, 1404): Next
+2025-10-27 15:29:14 | INFO     | app.ui_explorer:take_screenshot - Screenshot saved: back_test_0_1761557354.png
+2025-10-27 15:29:17 | INFO     | app.ui_explorer:take_screenshot - Screenshot saved: back_test_1_1761557357.png
+2025-10-27 15:29:19 | INFO     | app.ui_explorer:take_screenshot - Screenshot saved: back_test_2_1761557359.png
+2025-10-27 15:29:21 | INFO     | app.test_executor:run_tests - Phase 3: Testing form inputs...
+2025-10-27 15:29:21 | INFO     | app.test_executor:_test_forms - Testing forms...
+2025-10-27 15:29:21 | ERROR    | app.apk_installer:launch - Package name or main activity not set
+2025-10-27 15:29:27 | INFO     | app.test_executor:run_tests - Testing completed in 382.18 seconds
+2025-10-27 15:29:27 | INFO     | app.test_executor:run_tests - Total screens explored: 10
+2025-10-27 15:29:27 | INFO     | app.test_executor:run_tests - Total actions performed: 24
+2025-10-27 15:29:27 | INFO     | __main__:main - 
+📊 Step 4: Generating Test Report...
+2025-10-27 15:29:27 | INFO     | app.report_generator:generate - Generating test report...
+2025-10-27 15:29:27 | INFO     | app.report_generator:_generate_html - HTML report generated: reports\test_report_20251027_152927.html
+2025-10-27 15:29:27 | INFO     | __main__:main - 
+============================================================
+2025-10-27 15:29:27 | INFO     | __main__:main - ✅ Testing Complete!
+2025-10-27 15:29:27 | INFO     | __main__:main - ============================================================
+2025-10-27 15:29:27 | INFO     | __main__:main - 📊 Total Tests: 24
+2025-10-27 15:29:27 | INFO     | __main__:main - ✅ Passed: 24
+2025-10-27 15:29:27 | INFO     | __main__:main - ❌ Failed: 0
+2025-10-27 15:29:27 | INFO     | __main__:main - 🖼️  Screens Explored: 10
+2025-10-27 15:29:27 | INFO     | __main__:main - 📄 Report: reports\test_report_20251027_152927.html
+2025-10-27 15:29:27 | INFO     | __main__:main - ============================================================
+2025-10-27 15:29:27 | INFO     | __main__:main - 
+🧹 Cleaning up...
+2025-10-27 15:29:27 | INFO     | app.emulator_manager:stop - Stopping emulator...
+2025-10-27 15:29:27 | INFO     | app.emulator_manager:stop - Emulator stopped
+2025-10-27 15:29:27 | INFO     | __main__:main - 
+✨ All done! Check the report for detailed results.
+2025-10-27 15:50:12 | INFO     | __main__:main - ============================================================
+2025-10-27 15:50:12 | INFO     | __main__:main - 🤖 Automated Mobile App Testing Agent
+2025-10-27 15:50:12 | INFO     | __main__:main - ============================================================
+2025-10-27 15:50:12 | INFO     | __main__:main - 
+📱 Step 1: Starting Android Emulator...
+2025-10-27 15:50:12 | INFO     | app.emulator_manager:start - Starting emulator: test_device
+2025-10-27 15:50:12 | DEBUG    | app.emulator_manager:start - Command: C:\Users\hasib\AppData\Local\Android\Sdk\emulator\emulator.exe -avd test_device -port 5554 -no-snapshot-load -no-audio -gpu swiftshader_indirect
+2025-10-27 15:50:12 | INFO     | app.emulator_manager:start - Waiting for emulator to boot...
+2025-10-27 15:54:14 | ERROR    | app.emulator_manager:start - Emulator failed to boot within timeout
+2025-10-27 15:54:14 | ERROR    | __main__:main - Failed to start emulator. Exiting.
+2025-10-27 15:54:20 | INFO     | __main__:main - ============================================================
+2025-10-27 15:54:20 | INFO     | __main__:main - 🤖 Automated Mobile App Testing Agent
+2025-10-27 15:54:20 | INFO     | __main__:main - ============================================================
+2025-10-27 15:54:20 | INFO     | __main__:main - 
+📱 Step 1: Starting Android Emulator...
+2025-10-27 15:54:20 | INFO     | app.emulator_manager:start - Starting emulator: test_device
+2025-10-27 15:54:20 | INFO     | app.emulator_manager:start - Emulator already running
+2025-10-27 15:54:20 | INFO     | __main__:main - 
+📦 Step 2: Installing APK...
+2025-10-27 15:54:20 | INFO     | app.apk_installer:install - Installing APK: tests\sample_apks\myapp.apk
+2025-10-27 15:54:20 | ERROR    | app.apk_installer:_get_package_name - Failed to get package name: expected string or bytes-like object
+2025-10-27 15:54:20 | ERROR    | app.apk_installer:_get_main_activity - Failed to get main activity: expected string or bytes-like object
+2025-10-27 15:54:20 | INFO     | app.apk_installer:install - Package: None
+2025-10-27 15:54:20 | INFO     | app.apk_installer:install - Main Activity: None
+2025-10-27 15:54:20 | ERROR    | app.apk_installer:install - Installation failed: 
+2025-10-27 15:54:20 | ERROR    | __main__:main - Failed to install APK. Exiting.
+2025-10-27 15:54:20 | INFO     | app.emulator_manager:stop - Stopping emulator...
+2025-10-27 15:54:20 | INFO     | app.emulator_manager:stop - Emulator stopped
+2025-10-27 15:54:34 | INFO     | __main__:main - ============================================================
+2025-10-27 15:54:34 | INFO     | __main__:main - 🤖 Automated Mobile App Testing Agent
+2025-10-27 15:54:34 | INFO     | __main__:main - ============================================================
+2025-10-27 15:54:34 | INFO     | __main__:main - 
+📱 Step 1: Starting Android Emulator...
+2025-10-27 15:54:34 | INFO     | app.emulator_manager:start - Starting emulator: test_device
+2025-10-27 15:54:35 | DEBUG    | app.emulator_manager:start - Command: C:\Users\hasib\AppData\Local\Android\Sdk\emulator\emulator.exe -avd test_device -port 5554 -no-snapshot-load -no-audio -gpu swiftshader_indirect
+2025-10-27 15:54:35 | INFO     | app.emulator_manager:start - Waiting for emulator to boot...
+2025-10-27 15:58:35 | ERROR    | app.emulator_manager:start - Emulator failed to boot within timeout
+2025-10-27 15:58:35 | ERROR    | __main__:main - Failed to start emulator. Exiting.
+2025-10-27 16:01:57 | INFO     | __main__:main - ============================================================
+2025-10-27 16:01:57 | INFO     | __main__:main - 🤖 Automated Mobile App Testing Agent
+2025-10-27 16:01:57 | INFO     | __main__:main - ============================================================
+2025-10-27 16:01:57 | INFO     | __main__:main - 
+📱 Step 1: Starting Android Emulator...
+2025-10-27 16:01:57 | INFO     | app.emulator_manager:start - Starting emulator: test_device
+2025-10-27 16:01:57 | INFO     | app.emulator_manager:start - Emulator already running
+2025-10-27 16:01:57 | INFO     | __main__:main - 
+📦 Step 2: Installing APK...
+2025-10-27 16:01:57 | INFO     | app.apk_installer:install - Installing APK: tests\sample_apks\myapp.apk
+2025-10-27 16:01:57 | ERROR    | app.apk_installer:_get_package_name - Failed to get package name: expected string or bytes-like object
+2025-10-27 16:01:57 | ERROR    | app.apk_installer:_get_main_activity - Failed to get main activity: expected string or bytes-like object
+2025-10-27 16:01:57 | INFO     | app.apk_installer:install - Package: None
+2025-10-27 16:01:57 | INFO     | app.apk_installer:install - Main Activity: None
+2025-10-27 16:02:00 | INFO     | app.apk_installer:install - APK installed successfully
+2025-10-27 16:02:02 | INFO     | __main__:main - 
+🧪 Step 3: Running Automated Tests...
+2025-10-27 16:02:02 | INFO     | app.test_executor:run_tests - Starting automated testing...
+2025-10-27 16:02:02 | INFO     | app.test_executor:run_tests - Phase 1: Exploring app structure...
+2025-10-27 16:02:02 | ERROR    | app.apk_installer:launch - Package name or main activity not set
+2025-10-27 16:02:07 | INFO     | app.ui_explorer:take_screenshot - Screenshot saved: initial_screen_1761559325.png
+2025-10-27 16:02:10 | INFO     | app.test_executor:_explore_app - Clicking: At a glance
+2025-10-27 16:02:11 | INFO     | app.ui_explorer:take_screenshot - Screenshot saved: before_At a glance_1761559330.png
+2025-10-27 16:02:11 | DEBUG    | app.ui_explorer:tap_element - Tapping at (540, 367): At a glance
+2025-10-27 16:02:14 | INFO     | app.ui_explorer:take_screenshot - Screenshot saved: after_At a glance_1761559334.png
+2025-10-27 16:02:16 | INFO     | app.test_executor:_explore_app - New screen discovered!
+2025-10-27 16:02:20 | INFO     | app.test_executor:_explore_app - Clicking: next page
+2025-10-27 16:02:20 | INFO     | app.ui_explorer:take_screenshot - Screenshot saved: before_next page_1761559340.png
+2025-10-27 16:02:20 | DEBUG    | app.ui_explorer:tap_element - Tapping at (1006, 2252): next page
+2025-10-27 16:02:24 | INFO     | app.ui_explorer:take_screenshot - Screenshot saved: after_next page_1761559343.png
+2025-10-27 16:02:26 | INFO     | app.test_executor:_explore_app - New screen discovered!
+2025-10-27 16:02:29 | INFO     | app.test_executor:_explore_app - Clicking: Got it
+2025-10-27 16:02:29 | INFO     | app.ui_explorer:take_screenshot - Screenshot saved: before_Got it_1761559349.png
+2025-10-27 16:02:29 | DEBUG    | app.ui_explorer:tap_element - Tapping at (539, 2174): Got it
+2025-10-27 16:02:33 | INFO     | app.ui_explorer:take_screenshot - Screenshot saved: after_Got it_1761559352.png
+2025-10-27 16:02:38 | INFO     | app.test_executor:_explore_app - New screen discovered!
+2025-10-27 16:02:44 | INFO     | app.test_executor:_explore_app - Clicking: WebView
+2025-10-27 16:02:44 | INFO     | app.ui_explorer:take_screenshot - Screenshot saved: before_WebView_1761559364.png
+2025-10-27 16:02:44 | DEBUG    | app.ui_explorer:tap_element - Tapping at (540, 1236): 
+2025-10-27 16:02:48 | INFO     | app.ui_explorer:take_screenshot - Screenshot saved: after_WebView_1761559367.png
+2025-10-27 16:02:50 | INFO     | app.test_executor:_explore_app - New screen discovered!
+2025-10-27 16:02:53 | INFO     | app.test_executor:_explore_app - Clicking: Next
+2025-10-27 16:02:53 | INFO     | app.ui_explorer:take_screenshot - Screenshot saved: before_Next_1761559373.png
+2025-10-27 16:02:53 | DEBUG    | app.ui_explorer:tap_element - Tapping at (914, 2223): Next
+2025-10-27 16:02:57 | INFO     | app.ui_explorer:take_screenshot - Screenshot saved: after_Next_1761559377.png
+2025-10-27 16:03:03 | INFO     | app.test_executor:_explore_app - Clicking: Next
+2025-10-27 16:03:03 | INFO     | app.ui_explorer:take_screenshot - Screenshot saved: before_Next_1761559383.png
+2025-10-27 16:03:03 | DEBUG    | app.ui_explorer:tap_element - Tapping at (914, 1404): Next
+2025-10-27 16:03:07 | INFO     | app.ui_explorer:take_screenshot - Screenshot saved: after_Next_1761559387.png
+2025-10-27 16:03:12 | INFO     | app.test_executor:_explore_app - Clicking: Learn more about using your account
+2025-10-27 16:03:13 | INFO     | app.ui_explorer:take_screenshot - Screenshot saved: before_Learn more about usi_1761559392.png
+2025-10-27 16:03:13 | DEBUG    | app.ui_explorer:tap_element - Tapping at (540, 710): Learn more about using your account
+2025-10-27 16:03:16 | INFO     | app.ui_explorer:take_screenshot - Screenshot saved: after_Learn more about usi_1761559396.png
+2025-10-27 16:03:18 | INFO     | app.test_executor:_explore_app - New screen discovered!
+2025-10-27 16:03:22 | INFO     | app.test_executor:_explore_app - Clicking: Close
+2025-10-27 16:03:22 | INFO     | app.ui_explorer:take_screenshot - Screenshot saved: before_Close_1761559402.png
+2025-10-27 16:03:22 | DEBUG    | app.ui_explorer:tap_element - Tapping at (893, 1563): Close
+2025-10-27 16:03:26 | INFO     | app.ui_explorer:take_screenshot - Screenshot saved: after_Close_1761559405.png
+2025-10-27 16:03:31 | INFO     | app.test_executor:_explore_app - Clicking: Forgot email?
+2025-10-27 16:03:31 | INFO     | app.ui_explorer:take_screenshot - Screenshot saved: before_Forgot email?_1761559411.png
+2025-10-27 16:03:31 | DEBUG    | app.ui_explorer:tap_element - Tapping at (178, 1073): Forgot email?
+2025-10-27 16:03:35 | INFO     | app.ui_explorer:take_screenshot - Screenshot saved: after_Forgot email?_1761559414.png
+2025-10-27 16:03:37 | INFO     | app.test_executor:_explore_app - New screen discovered!
+2025-10-27 16:03:40 | INFO     | app.test_executor:_explore_app - Clicking: EditText
+2025-10-27 16:03:41 | INFO     | app.ui_explorer:take_screenshot - Screenshot saved: before_EditText_1761559420.png
+2025-10-27 16:03:41 | DEBUG    | app.ui_explorer:tap_element - Tapping at (540, 713): 
+2025-10-27 16:03:44 | INFO     | app.ui_explorer:take_screenshot - Screenshot saved: after_EditText_1761559424.png
+2025-10-27 16:03:49 | INFO     | app.test_executor:_explore_app - Clicking: EditText
+2025-10-27 16:03:50 | INFO     | app.ui_explorer:take_screenshot - Screenshot saved: before_EditText_1761559429.png
+2025-10-27 16:03:50 | DEBUG    | app.ui_explorer:tap_element - Tapping at (540, 713): 
+2025-10-27 16:03:53 | INFO     | app.ui_explorer:take_screenshot - Screenshot saved: after_EditText_1761559433.png
+2025-10-27 16:04:02 | INFO     | app.test_executor:_explore_app - No more elements to explore, going back...
+2025-10-27 16:04:06 | WARNING  | __main__:main - 
+
+⚠️  Testing interrupted by user
+2025-10-27 16:04:06 | INFO     | app.emulator_manager:stop - Stopping emulator...
+2025-10-27 16:04:06 | INFO     | app.emulator_manager:stop - Emulator stopped
+2025-10-27 16:09:36 | INFO     | __main__:main - ============================================================
+2025-10-27 16:09:36 | INFO     | __main__:main - 🤖 Automated Mobile App Testing Agent
+2025-10-27 16:09:36 | INFO     | __main__:main - ============================================================
+2025-10-27 16:09:36 | INFO     | __main__:main - 
+📱 Step 1: Starting Android Emulator...
+2025-10-27 16:09:36 | INFO     | app.emulator_manager:start - Starting emulator: test_device
+2025-10-27 16:09:36 | INFO     | app.emulator_manager:start - Emulator already running
+2025-10-27 16:09:36 | INFO     | __main__:main - 
+📦 Step 2: Installing APK...
+2025-10-27 16:09:36 | INFO     | app.apk_installer:install - Installing APK: tests\sample_apks\myapp.apk
+2025-10-27 16:09:36 | ERROR    | app.apk_installer:_get_package_name - Failed to get package name: expected string or bytes-like object
+2025-10-27 16:09:37 | ERROR    | app.apk_installer:_get_main_activity - Failed to get main activity: expected string or bytes-like object
+2025-10-27 16:09:37 | INFO     | app.apk_installer:install - Package: None
+2025-10-27 16:09:37 | INFO     | app.apk_installer:install - Main Activity: None
+2025-10-27 16:09:38 | INFO     | app.apk_installer:install - APK installed successfully
+2025-10-27 16:09:40 | INFO     | app.apk_installer:install - Performing warm-up launches to stabilize app...
+2025-10-27 16:09:40 | INFO     | app.apk_installer:_warmup_app - Warm-up launch 1/2...
+2025-10-27 16:09:45 | WARNING  | app.apk_installer:_warmup_app - Warm-up 1 failed: expected str, bytes or os.PathLike object, not NoneType
+2025-10-27 16:09:45 | INFO     | app.apk_installer:_warmup_app - Warm-up launch 2/2...
+2025-10-27 16:09:51 | WARNING  | app.apk_installer:_warmup_app - Warm-up 2 failed: expected str, bytes or os.PathLike object, not NoneType
+2025-10-27 16:09:51 | INFO     | app.apk_installer:_warmup_app - App warm-up complete
+2025-10-27 16:09:51 | INFO     | __main__:main - 
+🧪 Step 3: Running Automated Tests...
+2025-10-27 16:09:51 | INFO     | app.test_executor:run_tests - Starting automated testing...
+2025-10-27 16:09:51 | INFO     | app.test_executor:run_tests - Phase 1: Exploring app structure...
+2025-10-27 16:09:51 | ERROR    | app.apk_installer:launch - Package name or main activity not set
+2025-10-27 16:09:55 | INFO     | app.ui_explorer:take_screenshot - Screenshot saved: initial_screen_1761559794.png
+2025-10-27 16:09:59 | INFO     | app.test_executor:_explore_app - Clicking: Voice search
+2025-10-27 16:10:00 | INFO     | app.ui_explorer:take_screenshot - Screenshot saved: before_Voice search_1761559799.png
+2025-10-27 16:10:00 | DEBUG    | app.ui_explorer:tap_element - Tapping at (790, 2207): Voice search
+2025-10-27 16:10:04 | INFO     | app.ui_explorer:take_screenshot - Screenshot saved: after_Voice search_1761559803.png
+2025-10-27 16:10:07 | INFO     | app.test_executor:_explore_app - New screen discovered!
+2025-10-27 16:10:11 | INFO     | app.test_executor:_explore_app - Clicking: ViewGroup
+2025-10-27 16:10:11 | INFO     | app.ui_explorer:take_screenshot - Screenshot saved: before_ViewGroup_1761559811.png
+2025-10-27 16:10:11 | DEBUG    | app.ui_explorer:tap_element - Tapping at (540, 1200): 
+2025-10-27 16:10:15 | INFO     | app.ui_explorer:take_screenshot - Screenshot saved: after_ViewGroup_1761559814.png
+2025-10-27 16:10:18 | INFO     | app.test_executor:_explore_app - New screen discovered!
+2025-10-27 16:10:19 | WARNING  | __main__:main - 
+
+⚠️  Testing interrupted by user
+2025-10-27 16:10:19 | INFO     | app.emulator_manager:stop - Stopping emulator...
+2025-10-27 16:10:19 | INFO     | app.emulator_manager:stop - Emulator stopped
+2025-10-27 16:19:28 | INFO     | __main__:main - ============================================================
+2025-10-27 16:19:28 | INFO     | __main__:main - 🤖 Automated Mobile App Testing Agent
+2025-10-27 16:19:28 | INFO     | __main__:main - ============================================================
+2025-10-27 16:19:28 | INFO     | __main__:main - 
+📱 Step 1: Starting Android Emulator...
+2025-10-27 16:19:28 | INFO     | app.emulator_manager:start - Starting emulator: test_device
+2025-10-27 16:19:28 | DEBUG    | app.emulator_manager:start - Command: C:\Users\hasib\AppData\Local\Android\Sdk\emulator\emulator.exe -avd test_device -port 5554 -no-snapshot-load -no-audio -gpu swiftshader_indirect
+2025-10-27 16:19:28 | INFO     | app.emulator_manager:start - Waiting for emulator to boot...
+2025-10-27 16:19:43 | WARNING  | __main__:main - 
+
+⚠️  Testing interrupted by user
+2025-10-27 16:19:43 | INFO     | app.emulator_manager:stop - Stopping emulator...
+2025-10-27 16:19:44 | INFO     | app.emulator_manager:stop - Emulator stopped
+2025-10-27 16:21:15 | INFO     | __main__:main - ============================================================
+2025-10-27 16:21:15 | INFO     | __main__:main - 🤖 Automated Mobile App Testing Agent
+2025-10-27 16:21:15 | INFO     | __main__:main - ============================================================
+2025-10-27 16:21:15 | INFO     | __main__:main - 
+📱 Step 1: Starting Android Emulator...
+2025-10-27 16:21:15 | INFO     | app.emulator_manager:start - Starting emulator: test_device
+2025-10-27 16:21:15 | INFO     | app.emulator_manager:start - Emulator already running
+2025-10-27 16:21:15 | INFO     | __main__:main - 
+📦 Step 2: Installing APK...
+2025-10-27 16:21:15 | INFO     | app.apk_installer:install - Installing APK: tests\sample_apks\myapp.apk
+2025-10-27 16:21:15 | INFO     | app.apk_installer:install - Package: com.google.android.calculator
+2025-10-27 16:21:15 | INFO     | app.apk_installer:install - Main Activity: com.android.calculator2.Calculator
+2025-10-27 16:21:15 | INFO     | app.apk_installer:uninstall - Uninstalling: com.google.android.calculator
+2025-10-27 16:21:21 | INFO     | app.apk_installer:install - APK installed successfully
+2025-10-27 16:21:23 | INFO     | app.apk_installer:grant_permissions - Granting permissions...
+2025-10-27 16:21:23 | INFO     | app.apk_installer:install - Performing warm-up launches to stabilize app...
+2025-10-27 16:21:23 | INFO     | app.apk_installer:_warmup_app - Warm-up launch 1/2...
+2025-10-27 16:21:31 | INFO     | app.apk_installer:_warmup_app - Warm-up launch 2/2...
+2025-10-27 16:21:38 | INFO     | app.apk_installer:_warmup_app - App warm-up complete
+2025-10-27 16:21:38 | INFO     | app.apk_installer:grant_permissions - Granting permissions...
+2025-10-27 16:21:38 | INFO     | __main__:main - 
+🧪 Step 3: Running Automated Tests...
+2025-10-27 16:21:38 | INFO     | app.test_executor:run_tests - Starting automated testing...
+2025-10-27 16:21:38 | INFO     | app.test_executor:run_tests - Phase 1: Exploring app structure...
+2025-10-27 16:21:38 | INFO     | app.apk_installer:stop - Stopping app: com.google.android.calculator
+2025-10-27 16:21:38 | INFO     | app.apk_installer:launch - Launching app: com.google.android.calculator
+2025-10-27 16:21:38 | INFO     | app.apk_installer:stop - Stopping app: com.google.android.calculator
+2025-10-27 16:21:40 | INFO     | app.apk_installer:launch - Clearing app data for clean start...
+2025-10-27 16:21:48 | INFO     | app.apk_installer:launch - App launched successfully (attempt 1)
+2025-10-27 16:21:52 | INFO     | app.ui_explorer:take_screenshot - Screenshot saved: initial_screen_1761560511.png
+2025-10-27 16:21:55 | INFO     | app.test_executor:_explore_app - Clicking: 2
+2025-10-27 16:21:55 | INFO     | app.ui_explorer:take_screenshot - Screenshot saved: before_2_1761560515.png
+2025-10-27 16:21:55 | DEBUG    | app.ui_explorer:tap_element - Tapping at (413, 1916): 2
+2025-10-27 16:21:58 | INFO     | app.ui_explorer:take_screenshot - Screenshot saved: after_2_1761560518.png
+2025-10-27 16:22:01 | INFO     | app.test_executor:_explore_app - New screen discovered!
+2025-10-27 16:22:04 | INFO     | app.test_executor:_explore_app - Clicking: left or right parenthesis
+2025-10-27 16:22:04 | INFO     | app.ui_explorer:take_screenshot - Screenshot saved: before_left or right parent_1761560524.png
+2025-10-27 16:22:04 | DEBUG    | app.ui_explorer:tap_element - Tapping at (413, 1130): left or right parenthesis
+2025-10-27 16:22:08 | INFO     | app.ui_explorer:take_screenshot - Screenshot saved: after_left or right parent_1761560527.png
+2025-10-27 16:22:10 | INFO     | app.test_executor:_explore_app - New screen discovered!
+2025-10-27 16:22:13 | INFO     | app.test_executor:_explore_app - Clicking: percent
+2025-10-27 16:22:13 | INFO     | app.ui_explorer:take_screenshot - Screenshot saved: before_percent_1761560533.png
+2025-10-27 16:22:13 | DEBUG    | app.ui_explorer:tap_element - Tapping at (667, 1130): percent
+2025-10-27 16:22:17 | INFO     | app.ui_explorer:take_screenshot - Screenshot saved: after_percent_1761560537.png
+2025-10-27 16:22:19 | INFO     | app.test_executor:_explore_app - New screen discovered!
+2025-10-27 16:22:22 | INFO     | app.test_executor:_explore_app - Clicking: power
+2025-10-27 16:22:23 | INFO     | app.ui_explorer:take_screenshot - Screenshot saved: before_power_1761560542.png
+2025-10-27 16:22:23 | DEBUG    | app.ui_explorer:tap_element - Tapping at (599, 906): power
+2025-10-27 16:22:26 | INFO     | app.ui_explorer:take_screenshot - Screenshot saved: after_power_1761560546.png
+2025-10-27 16:22:28 | INFO     | app.test_executor:_explore_app - New screen discovered!
+2025-10-27 16:22:31 | INFO     | app.test_executor:_explore_app - Clicking: 7
+2025-10-27 16:22:32 | INFO     | app.ui_explorer:take_screenshot - Screenshot saved: before_7_1761560551.png
+2025-10-27 16:22:32 | DEBUG    | app.ui_explorer:tap_element - Tapping at (159, 1392): 7
+2025-10-27 16:22:35 | INFO     | app.ui_explorer:take_screenshot - Screenshot saved: after_7_1761560555.png
+2025-10-27 16:22:37 | INFO     | app.test_executor:_explore_app - New screen discovered!
+2025-10-27 16:22:41 | INFO     | app.test_executor:_explore_app - Clicking: minus
+2025-10-27 16:22:41 | INFO     | app.ui_explorer:take_screenshot - Screenshot saved: before_minus_1761560561.png
+2025-10-27 16:22:41 | DEBUG    | app.ui_explorer:tap_element - Tapping at (921, 1654): minus
+2025-10-27 16:22:44 | INFO     | app.ui_explorer:take_screenshot - Screenshot saved: after_minus_1761560564.png
+2025-10-27 16:22:47 | INFO     | app.test_executor:_explore_app - New screen discovered!
+2025-10-27 16:22:50 | INFO     | app.test_executor:_explore_app - Clicking: square root
+2025-10-27 16:22:50 | INFO     | app.ui_explorer:take_screenshot - Screenshot saved: before_square root_1761560570.png
+2025-10-27 16:22:50 | DEBUG    | app.ui_explorer:tap_element - Tapping at (145, 906): square root
+2025-10-27 16:22:54 | INFO     | app.ui_explorer:take_screenshot - Screenshot saved: after_square root_1761560573.png
+2025-10-27 16:22:56 | INFO     | app.test_executor:_explore_app - New screen discovered!
+2025-10-27 16:22:59 | INFO     | app.test_executor:_explore_app - Clicking: point
+2025-10-27 16:22:59 | INFO     | app.ui_explorer:take_screenshot - Screenshot saved: before_point_1761560579.png
+2025-10-27 16:22:59 | DEBUG    | app.ui_explorer:tap_element - Tapping at (413, 2178): point
+2025-10-27 16:23:03 | INFO     | app.ui_explorer:take_screenshot - Screenshot saved: after_point_1761560582.png
+2025-10-27 16:23:05 | INFO     | app.test_executor:_explore_app - New screen discovered!
+2025-10-27 16:23:08 | INFO     | app.test_executor:_explore_app - Clicking: Expand
+2025-10-27 16:23:09 | INFO     | app.ui_explorer:take_screenshot - Screenshot saved: before_Expand_1761560588.png
+2025-10-27 16:23:09 | DEBUG    | app.ui_explorer:tap_element - Tapping at (993, 906): Expand
+2025-10-27 16:23:12 | INFO     | app.ui_explorer:take_screenshot - Screenshot saved: after_Expand_1761560592.png
+2025-10-27 16:23:14 | INFO     | app.test_executor:_explore_app - New screen discovered!
+2025-10-27 16:23:18 | INFO     | app.test_executor:_explore_app - Clicking: 2(%^7−√.
+2025-10-27 16:23:18 | INFO     | app.ui_explorer:take_screenshot - Screenshot saved: before_2(%^7−√._1761560598.png
+2025-10-27 16:23:18 | DEBUG    | app.ui_explorer:tap_element - Tapping at (540, 424): 2(%^7−√.
+2025-10-27 16:23:22 | INFO     | app.ui_explorer:take_screenshot - Screenshot saved: after_2(%^7−√._1761560601.png
+2025-10-27 16:23:27 | INFO     | app.test_executor:_explore_app - Clicking: 8
+2025-10-27 16:23:28 | INFO     | app.ui_explorer:take_screenshot - Screenshot saved: before_8_1761560607.png
+2025-10-27 16:23:28 | DEBUG    | app.ui_explorer:tap_element - Tapping at (413, 1578): 8
+2025-10-27 16:23:31 | INFO     | app.ui_explorer:take_screenshot - Screenshot saved: after_8_1761560611.png
+2025-10-27 16:23:34 | INFO     | app.test_executor:_explore_app - New screen discovered!
+2025-10-27 16:23:35 | INFO     | app.test_executor:run_tests - Phase 2: Testing common flows...
+2025-10-27 16:23:35 | INFO     | app.apk_installer:stop - Stopping app: com.google.android.calculator
+2025-10-27 16:23:35 | INFO     | app.apk_installer:launch - Launching app: com.google.android.calculator
+2025-10-27 16:23:35 | INFO     | app.apk_installer:stop - Stopping app: com.google.android.calculator
+2025-10-27 16:23:37 | INFO     | app.apk_installer:launch - Clearing app data for clean start...
+2025-10-27 16:23:43 | INFO     | app.apk_installer:launch - App launched successfully (attempt 1)
+2025-10-27 16:23:46 | INFO     | app.test_executor:_test_navigation - Testing navigation...
+2025-10-27 16:23:58 | INFO     | app.test_executor:_test_back_button - Testing back button...
+2025-10-27 16:24:00 | DEBUG    | app.ui_explorer:tap_element - Tapping at (826, 906): factorial
+2025-10-27 16:24:04 | DEBUG    | app.ui_explorer:tap_element - Tapping at (159, 1916): 1
+2025-10-27 16:24:08 | DEBUG    | app.ui_explorer:tap_element - Tapping at (921, 1392): multiply
+2025-10-27 16:24:11 | INFO     | app.ui_explorer:take_screenshot - Screenshot saved: back_test_0_1761560650.png
+2025-10-27 16:24:14 | INFO     | app.ui_explorer:take_screenshot - Screenshot saved: back_test_1_1761560653.png
+2025-10-27 16:24:17 | INFO     | app.ui_explorer:take_screenshot - Screenshot saved: back_test_2_1761560656.png
+2025-10-27 16:24:19 | INFO     | app.test_executor:run_tests - Phase 3: Testing form inputs...
+2025-10-27 16:24:19 | INFO     | app.test_executor:_test_forms - Testing forms...
+2025-10-27 16:24:19 | INFO     | app.apk_installer:stop - Stopping app: com.google.android.calculator
+2025-10-27 16:24:19 | INFO     | app.apk_installer:launch - Launching app: com.google.android.calculator
+2025-10-27 16:24:19 | INFO     | app.apk_installer:stop - Stopping app: com.google.android.calculator
+2025-10-27 16:24:21 | INFO     | app.apk_installer:launch - Clearing app data for clean start...
+2025-10-27 16:24:27 | INFO     | app.apk_installer:launch - App launched successfully (attempt 1)
+2025-10-27 16:24:33 | INFO     | app.ui_explorer:take_screenshot - Screenshot saved: form_input_com.google.android.c_1761560673.png
+2025-10-27 16:24:33 | DEBUG    | app.ui_explorer:tap_element - Tapping at (540, 424): No formula
+2025-10-27 16:24:38 | DEBUG    | app.ui_explorer:input_text - Input text: Test Input
+2025-10-27 16:24:39 | INFO     | app.test_executor:run_tests - Testing completed in 181.28 seconds
+2025-10-27 16:24:39 | INFO     | app.test_executor:run_tests - Total screens explored: 10
+2025-10-27 16:24:39 | INFO     | app.test_executor:run_tests - Total actions performed: 16
+2025-10-27 16:24:39 | INFO     | __main__:main - 
+📊 Step 4: Generating Test Report...
+2025-10-27 16:24:39 | INFO     | app.report_generator:generate - Generating test report...
+2025-10-27 16:24:39 | INFO     | app.report_generator:_generate_html - HTML report generated: reports\test_report_20251027_162439.html
+2025-10-27 16:24:39 | INFO     | __main__:main - 
+============================================================
+2025-10-27 16:24:39 | INFO     | __main__:main - ✅ Testing Complete!
+2025-10-27 16:24:39 | INFO     | __main__:main - ============================================================
+2025-10-27 16:24:39 | INFO     | __main__:main - 📊 Total Tests: 16
+2025-10-27 16:24:39 | INFO     | __main__:main - ✅ Passed: 16
+2025-10-27 16:24:39 | INFO     | __main__:main - ❌ Failed: 0
+2025-10-27 16:24:39 | INFO     | __main__:main - 🖼️  Screens Explored: 10
+2025-10-27 16:24:39 | INFO     | __main__:main - 📄 Report: reports\test_report_20251027_162439.html
+2025-10-27 16:24:39 | INFO     | __main__:main - ============================================================
+2025-10-27 16:24:39 | INFO     | __main__:main - 
+🧹 Cleaning up...
+2025-10-27 16:24:39 | INFO     | app.apk_installer:stop - Stopping app: com.google.android.calculator
+2025-10-27 16:24:40 | INFO     | app.emulator_manager:stop - Stopping emulator...
+2025-10-27 16:24:40 | INFO     | app.emulator_manager:stop - Emulator stopped
+2025-10-27 16:24:40 | INFO     | __main__:main - 
+✨ All done! Check the report for detailed results.
+2025-10-27 16:59:05 | INFO     | __main__:main - ============================================================
+2025-10-27 16:59:05 | INFO     | __main__:main - 🤖 Automated Mobile App Testing Agent
+2025-10-27 16:59:05 | INFO     | __main__:main - ============================================================
+2025-10-27 16:59:05 | INFO     | __main__:main - 
+📱 Step 1: Starting Android Emulator...
+2025-10-27 16:59:05 | INFO     | app.emulator_manager:start - Starting emulator: test_device
+2025-10-27 16:59:06 | INFO     | app.emulator_manager:start - Emulator already running
+2025-10-27 16:59:06 | INFO     | __main__:main - 
+📦 Step 2: Installing APK...
+2025-10-27 16:59:06 | INFO     | app.apk_installer:install - Installing APK: tests\sample_apks\myapp.apk
+2025-10-27 16:59:06 | INFO     | app.apk_installer:install - Package: com.google.android.calculator
+2025-10-27 16:59:06 | INFO     | app.apk_installer:install - Main Activity: com.android.calculator2.Calculator
+2025-10-27 16:59:06 | INFO     | app.apk_installer:uninstall - Uninstalling: com.google.android.calculator
+2025-10-27 16:59:11 | INFO     | app.apk_installer:install - APK installed successfully
+2025-10-27 16:59:13 | INFO     | app.apk_installer:grant_permissions - Granting permissions...
+2025-10-27 16:59:14 | INFO     | app.apk_installer:install - Performing warm-up launches to stabilize app...
+2025-10-27 16:59:14 | INFO     | app.apk_installer:_warmup_app - Warm-up launch 1/2...
+2025-10-27 16:59:18 | WARNING  | __main__:main - 
+
+⚠️  Testing interrupted by user
+2025-10-27 16:59:18 | INFO     | app.apk_installer:stop - Stopping app: com.google.android.calculator
+2025-10-27 16:59:18 | INFO     | app.emulator_manager:stop - Stopping emulator...
+2025-10-27 16:59:18 | INFO     | app.emulator_manager:stop - Emulator stopped
+2025-10-28 12:03:08 | INFO     | __main__:main - ============================================================
+2025-10-28 12:03:08 | INFO     | __main__:main - 🤖 Automated Mobile App Testing Agent
+2025-10-28 12:03:08 | INFO     | __main__:main - ============================================================
+2025-10-28 12:03:08 | INFO     | __main__:main - 
+📱 Step 1: Starting Android Emulator...
+2025-10-28 12:03:08 | INFO     | app.emulator_manager:start - Starting emulator: test_device
+2025-10-28 12:03:09 | DEBUG    | app.emulator_manager:start - Command: C:\Users\hasib\AppData\Local\Android\Sdk\emulator\emulator.exe -avd test_device -port 5554 -no-snapshot-load -no-audio -gpu swiftshader_indirect
+2025-10-28 12:03:09 | INFO     | app.emulator_manager:start - Waiting for emulator to boot...
+2025-10-28 12:07:11 | ERROR    | app.emulator_manager:start - Emulator failed to boot within timeout
+2025-10-28 12:07:11 | ERROR    | __main__:main - Failed to start emulator. Exiting.
