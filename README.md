@@ -1,6 +1,5 @@
 
 
-````markdown
 # 🤖 Automated Mobile App Testing Agent
 
 An **AI-powered agent** that automatically tests Android mobile applications.  
