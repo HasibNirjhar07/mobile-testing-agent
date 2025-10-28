@@ -388,13 +388,7 @@ Please:
 
 ---
 
-## 🆘 Support
 
-* 🐞 **Issues**: Open an issue on GitHub
-* 💬 **Discussions**: Join our discussions
-* 📧 **Email**: [support@example.com](mailto:support@example.com)
-
----
 
 ## 🙏 Acknowledgments
 
