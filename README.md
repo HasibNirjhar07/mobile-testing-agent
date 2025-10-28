@@ -407,6 +407,3 @@ Please:
 ---
 
 
-
-Would you like me to add a **badge section** (e.g., “Python version”, “License”, “Build passing”, etc.) at the top? Those look great on GitHub.
-```
